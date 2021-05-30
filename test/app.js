@@ -1,35 +1,37 @@
+// 1
+let input = prompt("nhập một chuỗi");
+ function reverse(input) {
+    var i = input.length,o = '';
+    while (i > 0) {
+    o += input.substring(i - 1, i);
+    i--;
+    }
+    return o;
+ }
 
-// let input = prompt("nhập một chuỗi");
-//  function reverse(input) {
-//     var i = input.length,o = '';
-//     while (i > 0) {
-//     o += input.substring(i - 1, i);
-//     i--;
-//     }
-//     return o;
-//  }
+ console.log(reverse(input));
+// 2
+ let str = prompt("nhập một chuỗi");
 
-//  console.log(reverse(input));
-
-//  let str = prompt("nhập một chuỗi");
-
-//  function capitalize(str) {
-// 	var strArr=str.split(" ");
-// 	for(var i=0;i<strArr.length;i++){
-//       var charArr=strArr[i].split("");
-// 	    charArr[0]=charArr[0].toUpperCase();
-//       strArr[i]=charArr.join("");
+ function capitalize(str) {
+	var strArr=str.split(" ");
+	for(var i=0;i<strArr.length;i++){
+      var charArr=strArr[i].split("");
+	    charArr[0]=charArr[0].toUpperCase();
+      strArr[i]=charArr.join("");
 	    
-// 	}
-// 	return strArr.join(" ");
-// }
+	}
+	return strArr.join(" ");
+}
 
-// console.log(capitalize(str));
+console.log(capitalize(str));
+// 3
+let Arr=[1,2,3,3,4,5,4,4,4,5,5];
+const uniqueSet = new Set(Arr);
+const backToArray = [...uniqueSet];
+console.log(backToArray);
 
-// let Arr=[1,2,3,3,4,5,4,4,4,5,5];
-// const uniqueSet = new Set(Arr);
-// const backToArray = [...uniqueSet];
-// console.log(backToArray);
+// 4
 
 let Staff = [
     { 
@@ -94,3 +96,16 @@ let input = prompt("nhập C/R/U/D");
 //  if (date >= 1 && date <= 31) {
      
 //  }
+
+
+// 5
+let date = prompt("Nhap ngay thang nam (mm/dd/yy)");
+function isValidDate(date) {
+    let temp = date.split('/');
+    // console.log(temp);
+    // let d = new Date(temp[2] + '/' + temp[0] + '/' + temp[1]);
+    // return (d && (d.getMonth() + 1) == temp[0] && d.getDate() == Number(temp[1]) && d.getFullYear() == Number(temp[2]));
+}
+    alert("Ngay " + date + " la ngay hop le \n Va ngay tiep theo la... cái gì đó chưa tìm ra :)) ");
+console.log(isValidDate(date));
+
